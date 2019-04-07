@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/settings.css" rel="stylesheet" type="text/css"/>
+    <style>
+.switch {
+  width: 60px;
+  height: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 10;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #F58937;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #F58937;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 100%;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #F58937;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+    </head>
+    <body style="margin: 0;
+ background: rgba(255, 255, 255, 1.0);">
+        <input id="anPageName" name="page" type="hidden" value="settings"/>
+        <div class="settings">
+            <div style="width: 375px; height: 100%; position:relative; margin:auto;">
+                <div class="circles">
+                    <img anima-src="./img/editprofile-oval@2x.png" class="oval" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/signup-oval-2@2x.png" class="oval1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/signup-oval-2@2x.png" class="oval2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/sharepage-oval-4@2x.png" class="oval3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/sharepage-oval-4@2x.png" class="oval4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/sharepage-oval-4@2x.png" class="oval5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/editprofile-oval-7@2x.png" class="oval6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/editprofile-oval-7@2x.png" class="oval7" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/sharepage-oval-8@2x.png" class="oval8" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <img anima-src="./img/sharepage-oval-8@2x.png" class="oval9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                </div>
+                <div class="december2016">
+                    December 2016
+                </div>
+                <div class="thursday">
+                    Thursday
+                </div>
+                <div class="rectangle32">
+                </div>
+                <div class="section2">
+                    <div class="background">
+                        <div class="background1">
+                        </div>
+                        <img anima-src="./img/settings-line.png" class="line" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    </div>
+                    <div class="addyourown">
+                        <div class="changebuttonoff">
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                        <div class="notifymebyemail">
+                            Notify Me by Email
+                        </div>
+                    </div>
+                    <div class="takethepill">
+                        <div class="changebuttonoff">
+                                <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                    </div>
+                        <div class="takethepill1">
+                            Send Notifications
+                        </div>
+                    </div>
+                </div>
+                <div class="section21">
+                    <a href="login.html">
+                    <div class="background">
+                        <div class="background1">
+                        </div>
+                    </div>
+                    <div class="takethepill">
+                        <div class="takethepill1">
+                            Logout
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="section1">
+                    <div class="background">
+                        <div class="background1">
+                        </div>
+                        <img anima-src="./img/sharepage-line-3.png" class="line3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        <img anima-src="./img/sharepage-line-3.png" class="line31" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        <img anima-src="./img/sharepage-line-3.png" class="line1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    </div>
+                    <div class="remindertext">
+                            <a href="feedback.html">
+                        <div class="remindertext1">
+                            Feedback
+                        </div>
+                    </a>
+                    </div>
+                    <div class="time">
+                            <a href="aboutus.html">
+
+                        <div class="time1">
+                            About Us
+                        </div>
+                    </a>
+                    </div>
+                    <div class="remindme">
+                        <div class="remindme1">
+                            Categorize
+                        </div>
+                    </div>
+                    <div class="periodstarts">
+                                              
+                            <div class="changebuttonon">
+                                    <label class="switch">
+                                            <input type="checkbox" checked>
+                                            <span class="slider round"></span>
+                                          </label>
+                                          </div>
+                        <a href="editprofile.html" style="text-decoration: none;"> 
+                        <div class="periodstarts1">
+                            Edit Profile
+                        </div>
+                    </a>
+                    </div>
+                </a>
+                </div>
+                <div class="group">
+                    <div class="label1">
+                            <div class="tooltip" style="color: black; "> ?
+                                    <span class="tooltiptext">Enabling this feature allows you to categorize the events based on field of interest.</span>
+                                  </div>
+                    </div>
+                </div>
+                <div class="iphonexbarstabbar4items">
+                    <div class="background">
+                    </div>
+                    <img anima-src="./img/homepagegrid-bar.png" class="bar" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <div class="iphonexhomeindicatorhomeindicatoronlight">
+                        <div class="background1">
+                        </div>
+                    </div>
+                    <div class="item2">
+                            <a href="mycalendar.html">
+                        <div class="background1">
+                        </div>
+                        <div class="calendar">
+                            Calendar
+                        </div>
+                        <img anima-src="./img/homepagelist-fill-1@2x.png" class="fill1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    </div>
+                    <div class="item1">
+                            <a href="homepagegrid.html">
+                        <div class="background1">
+                        </div>
+                        <div class="home">
+                            Home
+                        </div>
+                        <div class="activeicon">
+                            <div class="background2">
+                            </div>
+                        </div>
+                        <div class="group3">
+                            <img anima-src="./img/settings-group-3@2x.png" class="group31" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="overridestabbaritemcopy">
+                            <a href="mypoints.html">
+
+                        <div class="background1">
+                        </div>
+                        <div class="points">
+                            Points
+                        </div>
+                        <div class="group3">
+                            <img anima-src="./img/agenda---confirmation-group-3-1@2x.png" class="group31" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="overridestabbaritemcopy2">
+                            <a href="settings.html">
+
+                        <div class="background1">
+                        </div>
+                        <div class="activeicon">
+                            <div class="background2">
+                            </div>
+                        </div>
+                        <div class="settings1">
+                            Settings
+                        </div>
+                        <div class="group10">
+                            <div class="group3">
+                                <img anima-src="./img/feedback-group-3-2@2x.png" class="group31" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                            </a>
+                            </div>
+                            <img anima-src="./img/editprofile-fill-4@2x.png" class="fill4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                            <img anima-src="./img/feedback-fill-6@2x.png" class="fill6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                            <img anima-src="./img/editprofile-fill-8@2x.png" class="fill8" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script>
+            anima_isHidden = function(e) {
+                if (!(e instanceof HTMLElement)) return !1;
+                if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+                return !1;
+            };
+            anima_loadAsyncSrcForTag = function(tag) {
+                var elements = document.getElementsByTagName(tag);
+                var toLoad = [];
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var src = e.getAttribute("src");
+                    var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                    if (loaded) continue;
+                    var asyncSrc = e.getAttribute("anima-src");
+                    if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+                    if (anima_isHidden(e)) continue;
+                    toLoad.push(e);
+                }
+                toLoad.sort(function(a, b) {
+                    return anima_getTop(a) - anima_getTop(b);
+                });
+                for (var i = 0; i < toLoad.length; i++) {
+                    var e = toLoad[i];
+                    var asyncSrc = e.getAttribute("anima-src");
+                    e.setAttribute("src", asyncSrc);
+                }
+            };
+            anima_pauseHiddenVideos = function(tag) {
+                var elements = document.getElementsByTagName("video");
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+                    var isHidden = anima_isHidden(e);
+                    if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+                        e.play();
+                    } else if (isPlaying && isHidden) {
+                        e.pause();
+                    }
+                }
+            };
+            anima_loadAsyncSrc = function(tag) {
+                anima_loadAsyncSrcForTag("img");
+                anima_loadAsyncSrcForTag("iframe");
+                anima_loadAsyncSrcForTag("video");
+                anima_pauseHiddenVideos();
+            };
+            var anima_getTop = function(e) {
+                var top = 0;
+                do {
+                    top += e.offsetTop || 0;
+                    e = e.offsetParent;
+                } while (e);
+                return top;
+            };
+            anima_loadAsyncSrc();
+            anima_old_onResize = window.onresize;
+            anima_new_onResize = undefined;
+            anima_updateOnResize = function() {
+                if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+                    anima_new_onResize = function(x) {
+                        if (anima_old_onResize != undefined) anima_old_onResize(x);
+                        anima_loadAsyncSrc();
+                    };
+                    window.onresize = anima_new_onResize;
+                    setTimeout(function() {
+                        anima_updateOnResize();
+                    }, 3000);
+                }
+            };
+            anima_updateOnResize();
+            setTimeout(function() {
+                anima_loadAsyncSrc();
+            }, 200);
+        </script>
+        <!-- End of Scripts -->
+    </body>
+</html>
